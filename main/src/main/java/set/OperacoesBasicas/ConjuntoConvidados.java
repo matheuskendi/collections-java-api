@@ -3,11 +3,11 @@ package main.java.set.OperacoesBasicas;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ConjuntoConvidados {
+public class ConjuntoConvidados{
 
     private Set<Convidado> convidadoSet;
 
-    public ConjuntoConvidados(Set<Convidado> convidadoSet) {
+    public ConjuntoConvidados() {
         this.convidadoSet = new HashSet<>();
     }
 
@@ -31,4 +31,21 @@ public class ConjuntoConvidados {
     public void exibirConvidados(){
         System.out.println(convidadoSet);
     }
+
+
+    public static void main(String[] args) {
+        ConjuntoConvidados conjuntoConvidados = new ConjuntoConvidados();
+
+        conjuntoConvidados.adicionarConvidado("Convidado 1", 1);
+        conjuntoConvidados.adicionarConvidado("Convidado 2", 2);
+        conjuntoConvidados.adicionarConvidado("Convidado 2", 2);
+        conjuntoConvidados.adicionarConvidado("Convidado 4", 4);
+        conjuntoConvidados.adicionarConvidado("Convidado 5", 5);
+        conjuntoConvidados.adicionarConvidado("Convidado 6", 6);
+
+        System.out.println("Existe " + conjuntoConvidados.contarConvidados() + " convidados dentro do set convidados");
+
+        conjuntoConvidados.removerConvidadoPorCodigoConvite(1);
+    }
 }
+
